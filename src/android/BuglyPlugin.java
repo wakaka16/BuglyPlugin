@@ -20,14 +20,7 @@ import com.tencent.bugly.crashreport.CrashReport.UserStrategy;
 
 public class BuglyPlugin extends CordovaPlugin {
     public static final String TAG = "BuglyPlugin";
-    private String APP_ID;
     public static final String ERROR_INVALID_PARAMETERS = "参数格式错误";
-
-    @Override
-    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-        super.initialize(cordova, webView);
-        APP_ID = "7ae957f41e";
-    }
 
     @Override
     public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) throws JSONException {
@@ -87,7 +80,7 @@ public class BuglyPlugin extends CordovaPlugin {
                 debugModel = BuildConfig.DEBUG;
             }
 
-            CrashReport.initCrashReport(this.cordova.getActivity().getApplicationContext(),APP_ID,debugModel,strategy);
+            CrashReport.initCrashReport(this.cordova.getActivity().getApplicationContext(),"7ae957f41e",debugModel,strategy);
         } catch (JSONException e) {
             callbackContext.error(ERROR_INVALID_PARAMETERS);
             return true;
