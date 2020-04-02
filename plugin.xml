@@ -2,8 +2,6 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.mzk.bugly" version="1.0.0">
   <name>BuglyPlugin</name>
-  <preference name="ANDROID_APPID" />
-  <preference name="IOS_APPID" />
   <js-module name="BuglyPlugin" src="www/BuglyPlugin.js">
     <clobbers target="cordova.plugins.BuglyPlugin"/>
   </js-module>
@@ -18,7 +16,6 @@
       <feature name="BuglyPlugin">
         <param name="android-package" value="com.mzk.bugly.BuglyPlugin"/>
       </feature>
-<!--      <preference name="ANDROID_APPID" value="$ANDROID_APPID"/>-->
     </config-file>
   </platform>
 

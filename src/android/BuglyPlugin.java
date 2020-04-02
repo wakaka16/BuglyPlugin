@@ -21,14 +21,12 @@ import com.tencent.bugly.crashreport.CrashReport.UserStrategy;
 public class BuglyPlugin extends CordovaPlugin {
     public static final String TAG = "BuglyPlugin";
     private String APP_ID;
-    private static final String BUGLY_APP_ID = "ANDROID_APPID";
     public static final String ERROR_INVALID_PARAMETERS = "参数格式错误";
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
-//        APP_ID = webView.getPreferences().getString(BUGLY_APP_ID,"");
-        APP_ID = "1.5.7";
+        APP_ID = "7ae957f41e";
     }
 
     @Override
