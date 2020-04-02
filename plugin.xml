@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.mzk.bugly" version="1.0.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"  xmlns:android="http://schemas.android.com/apk/res/android" id="com.mzk.bugly" version="1.0.1">
   <name>BuglyPlugin</name>
   <js-module name="BuglyPlugin" src="www/BuglyPlugin.js">
     <clobbers target="cordova.plugins.BuglyPlugin"/>
   </js-module>
-  <!-- android -->
   <platform name="android">
     <lib-file src="src/android/libs/bugly_crash_release.jar" />
-    <source-file src="src/android/BuglyPlugin.java" target-dir="src/com/mzk/bugly" />
-<!--    <config-file target="AndroidManifest.xml" parent="/manifest/application">-->
-<!--      <meta-data android:name="BUGLY_APPID" android:value="$ANDROID_APPID" />-->
-<!--    </config-file>-->
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="BuglyPlugin">
         <param name="android-package" value="com.mzk.bugly.BuglyPlugin"/>
       </feature>
     </config-file>
+    <source-file src="src/android/BuglyPlugin.java" target-dir="src/com/mzk/bugly" />
+
   </platform>
 
 </plugin>
